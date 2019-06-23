@@ -1,0 +1,29 @@
+.Lista { padding: 0 0 40px 20px; }
+
+.Lista dl { font-weight: bold; margin-top: 30px; }
+
+.Lista dd { color: #485967; margin-top: 10px; }
+
+.Lista dd:first-of-type { padding-top: 10px; }
+
+.Lista img { border: 1px solid #485967; border-radius: 4px; padding: 5px; width: 150px; }
+
+
+@media only screen and (min-width: 420px){
+  .Grid { display: grid; grid-template-columns: 4fr 2fr; }
+  .Lista dd:last-of-type { padding-top: 70px; }
+}
+
+@media only screen and (min-width: 740px){
+  .Lista dt, .Lista dd:last-of-type { font-size: 24px; }
+  .Lista dd:first-of-type { padding-left: 140px; }
+   
+}
+
+@media only screen and (min-width: 1050px){
+  
+  .Lista img { width: 190px; }
+  
+  .Lista dd:first-of-type { padding-left: 300px; }
+  .Lista dd:last-of-type { padding: 100px 0 0 70px; }
+}

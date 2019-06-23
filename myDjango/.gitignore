@@ -1,0 +1,7 @@
+### Python ###
+# Logs
+logs
+*.log
+
+# Dependency directories
+myDjango_environment/

@@ -1,0 +1,37 @@
+{
+  "name": "web-scrapy",
+  "version": "1.0.0",
+  "description": "Extraindo dados de produtos Geme of Thrones do site NerdStore",
+  "main": "app.js",
+  "proxy": "http://localhost:8000/",
+  "scripts": {
+    "babel": "babel js/source -d js/build",
+    "browserify": "browserify js/build/app.js -o bundle.js",
+    "concat": "concat -o bundle.css ./css/app.css ./css/components/header.css ./css/components/footer.css ./css/components/form.css ./css/components/lista.css ./css/components/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web-scrap",
+    "data",
+    "react",
+    "django",
+    "python"
+  ],
+  "author": "Marcus Vinícius",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "concat": "^1.0.3",
+    "nodemon": "^1.19.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "request": "^2.88.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4"
+  }
+}

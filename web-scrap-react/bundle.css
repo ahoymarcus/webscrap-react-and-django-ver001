@@ -1,0 +1,101 @@
+html { background-color: linen; font: 16px Arial; }
+
+.vazio { min-height: 1px; }
+
+.App h2 { padding-left: 10px; margin-top: 60px; }
+
+.Selecionado img { border: 1px solid #485967; border-radius: 4px; padding: 5px; width: 150px; margin-top: 30px; }
+
+.Selecionado { display: grid; grid-template-rows: auto; font-weight: bolder; text-shadow: 1px 1px #a99941; font-size: 20px; }
+
+.Selecionado img { box-shadow: 1px 1px #aba1a1; }
+
+@media only screen and (min-width: 402px){
+  .Selecionado { grid-template-columns: 2fr 3fr 1fr; }
+  .Selecionado .Sel-1, .Selecionado .Sel-3 { padding-top: 70px; }
+  .Selecionado .Sel-1 { padding-left: 5px; }
+  .Selecionado .Sel-3 { padding-right: 5px; }
+}
+
+@media only screen and (min-width: 725px){
+  .Selecionado .Sel-1 { font-size: 26px; }
+  .Selecionado .Sel-2 { padding-left: 90px; }
+  .Selecionado .Sel-3 { font-size: 24px; }
+}
+
+@media only screen and (min-width: 980px){
+  .Selecionado img { width: 230px; }
+  .Selecionado .Sel-1, .Selecionado .Sel-3 { padding-top: 130px; }
+  .Selecionado .Sel-1 { padding-left: 80px; }
+} 
+
+
+.Header { background-color: rgba(171, 171, 63, 0.2); height: 130px; border-radius: 10px 10px 0 0; }
+
+.Header h1, .Header p { text-align: center; }
+
+.Header h1 { padding: 20px 0 10px 0; color: #7b6906; text-shadow: 1px 1px #f3c3c3; }
+
+.Header p { color: #a99941; text-shadow: 0.3px 0.3px rgba(136, 201, 220, 0.21); font-weight: bold; }
+
+
+
+
+
+
+
+
+.Footer { /*height: 50px;*/ float: left;}
+
+.Footer span { padding: 1px 0px; font-weight: bold; font-size: small; background-color: rgba(171, 171, 63, 0.2); border-radius: 0 0 10px 10px; position: relative; /*bottom: 10px;*/ }
+.Form form { padding: 40px 50px; } 
+
+.Form input { padding: 8px; margin-right: 10px; border-radius: 5px; } 
+
+.Form input:first-of-type { background-color: rgba(116, 116, 226, 0.07); }
+
+.Form input:last-of-type { background-color: rgba(171, 171, 63, 0.35); border-color: #c1c1be; margin-top: 5px; }
+
+.Form span { color: #485967; font-size: 30px; padding-top: 45px; display: block; overflow: hidden; }
+@media only screen and (min-width: 820px){
+  .Form span { display: inline; font-size: 45px; padding: 0 0 0 100px; }
+}
+
+
+
+.Lista { padding: 0 0 40px 20px; }
+
+.Lista dl { font-weight: bold; margin-top: 30px; }
+
+.Lista dd { color: #485967; margin-top: 10px; }
+
+.Lista dd:first-of-type { padding-top: 10px; }
+
+.Lista img { border: 1px solid #485967; border-radius: 4px; padding: 5px; width: 150px; }
+
+
+@media only screen and (min-width: 420px){
+  .Grid { display: grid; grid-template-columns: 4fr 2fr; }
+  .Lista dd:last-of-type { padding-top: 70px; }
+}
+
+@media only screen and (min-width: 740px){
+  .Lista dt, .Lista dd:last-of-type { font-size: 24px; }
+  .Lista dd:first-of-type { padding-left: 140px; }
+   
+}
+
+@media only screen and (min-width: 1050px){
+  
+  .Lista img { width: 190px; }
+  
+  .Lista dd:first-of-type { padding-left: 300px; }
+  .Lista dd:last-of-type { padding: 100px 0 0 70px; }
+}
+
+.Main { background: linear-gradient(to bottom right, rgba(123, 105, 6, 0.15) 10%, rgba(136, 201, 220, 0.21) 96%, rgba(123, 105, 6, 0.3)); min-height: 560px; border-radius: 0 0 10px 10px; }
+
+.Main .background { background-color: rgba(136, 136, 179, 0.02); }
+
+
+

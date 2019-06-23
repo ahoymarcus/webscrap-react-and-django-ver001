@@ -1,0 +1,14 @@
+.Header { background-color: rgba(171, 171, 63, 0.2); height: 130px; border-radius: 10px 10px 0 0; }
+
+.Header h1, .Header p { text-align: center; }
+
+.Header h1 { padding: 20px 0 10px 0; color: #7b6906; text-shadow: 1px 1px #f3c3c3; }
+
+.Header p { color: #a99941; text-shadow: 0.3px 0.3px rgba(136, 201, 220, 0.21); font-weight: bold; }
+
+
+
+
+
+
+
