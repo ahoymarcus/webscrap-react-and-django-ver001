@@ -13,6 +13,8 @@ from bs4 import BeautifulSoup
 scrapy_page = 'https://nerdstore.com.br/categoria/especiais/game-of-thrones/'
 
 content = bytearray()
+produto = ''
+scrap_itens = []
 
 
 def index(request):
@@ -27,7 +29,7 @@ def index(request):
     get_met(request)
     
      
-  return JsonResponse(itens)
+  return JsonResponse(scrap_itens, safe=False)
 
 
 def get_target_page(web_page):
@@ -36,7 +38,7 @@ def get_target_page(web_page):
   print('Requisição bem sucedida!', r)
   content = r.content
   
-  print("Tipo do objeto:", type(content))
+  #print("Tipo do objeto:", type(content))
   
  
 def get_met(request): 
@@ -45,8 +47,15 @@ def get_met(request):
   print(path)
   
   produto = request.GET['produto']
-  print('Incoming request...')
+  print('Incoming request for...', produto)
+  
+  #print("Tipo do objeto:", type(produto))
+  
+  web_scrapper()
+  
  
+
+def web_scrapper():
   soup = BeautifulSoup(content, 'html.parser')
   
   # Scrapping
@@ -58,7 +67,6 @@ def get_met(request):
   link_str = str(prod_link)
   preco_str = str(prod_preco)
   
-  itens = []
   i = 0
   while i < len(nome_str):
     item = {
@@ -66,7 +74,7 @@ def get_met(request):
       "link": link_str[i],
       "preco": preco_str[i]
     }
-    itens.append(item)
+    scrap_itens.append(item)
     i += 1
   
   
@@ -74,7 +82,7 @@ def get_met(request):
     print("Let's get started scrapping: ", produto)
   
     # Buscando a posição da estrutura dentro da lista retornada
-    prod_indice = itens.index(produto)
+    prod_indice = scrap_itens.index(produto)
     
     selecao = {
       "produto": nome_str[prod_indice],
@@ -83,5 +91,9 @@ def get_met(request):
     }
     
     return JsonResponse(selecao)
+  
+  
+  
+  
   
   
