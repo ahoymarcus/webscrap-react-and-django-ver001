@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from django.http import JsonResponse
+from django.http import JsonResponse, Http404
 
 import requests
 
@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 
 # Create your views here.
 
+false_page = 'http://my-nonexistentpage.com/'
 scrapy_page = 'https://nerdstore.com.br/categoria/especiais/game-of-thrones/'
 
 content = bytearray()
@@ -21,7 +22,7 @@ def index(request):
   
   print("You're looking at the index page of scrapapp application!")
   
-  get_target_page(scrapy_page)
+  get_target_page(false_page)
   
   
   if request.method == 'GET':
@@ -29,13 +30,11 @@ def index(request):
     
     scrap_search()
     
-    
-  
   
 
 def get_target_page(web_page):
 
-  r = requests.get(scrapy_page)
+  r = requests.get(web_page)
   
   if r.status_code == 200:
     print('Requisição bem sucedida!', r)
@@ -45,7 +44,8 @@ def get_target_page(web_page):
     web_scrapper()
     
     return JsonResponse(scrap_itens, safe=False)
-  
+  else:
+    return Http404('<h1>Page not found</h1>')
   
  
 def get_met(request): 
