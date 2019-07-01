@@ -24,21 +24,28 @@ def index(request):
   get_target_page(scrapy_page)
   
   
-  
   if request.method == 'GET':
     get_met(request)
     
-     
-  return JsonResponse(scrap_itens, safe=False)
-
+    scrap_search()
+    
+    
+  
+  
 
 def get_target_page(web_page):
 
   r = requests.get(scrapy_page)
-  print('Requisição bem sucedida!', r)
-  content = r.content
   
-  #print("Tipo do objeto:", type(content))
+  if r.status_code == 200:
+    print('Requisição bem sucedida!', r)
+    content = r.content
+    #print("Tipo do objeto:", type(content))
+    
+    web_scrapper()
+    
+    return JsonResponse(scrap_itens, safe=False)
+  
   
  
 def get_met(request): 
@@ -50,8 +57,6 @@ def get_met(request):
   print('Incoming request for...', produto)
   
   #print("Tipo do objeto:", type(produto))
-  
-  web_scrapper()
   
  
 
@@ -78,6 +83,7 @@ def web_scrapper():
     i += 1
   
   
+def scrap_search():
   if produto is not None and produto != '':
     print("Let's get started scrapping: ", produto)
   
