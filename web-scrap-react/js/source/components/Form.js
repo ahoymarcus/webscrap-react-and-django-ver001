@@ -16,7 +16,7 @@ class Form extends React.Component{
       <div className="Form">
         
         <form action="http://127.0.0.1:8000/scrapapp" method="GET">
-          Produto: <input type="text" name="produto" value={this.state.value} onChange={this.handleChange} placeholder="Escolha o seu produto..." />
+          Produto: <input type="text" name="produto" value={this.state.value} onChange={this.handleChange} placeholder="Escolha o seu produto..." required />
           <input type="submit" value="Escolha seu produto" />
           
           <span>{this.state.value}</span>

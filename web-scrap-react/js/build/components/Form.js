@@ -65,7 +65,8 @@ function (_React$Component) {
         name: "produto",
         value: this.state.value,
         onChange: this.handleChange,
-        placeholder: "Escolha o seu produto..."
+        placeholder: "Escolha o seu produto...",
+        required: true
       }), _react["default"].createElement("input", {
         type: "submit",
         value: "Escolha seu produto"
