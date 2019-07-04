@@ -6,6 +6,9 @@
 
 .Form input:last-of-type { background-color: rgba(171, 171, 63, 0.35); border-color: #c1c1be; margin-top: 5px; }
 
+.Form button { background-color: transparent; border: none; color: RGBA(150, 67, 67, 0.7); }
+.Form button:hover { font-size: 14px; color: RGBA(150, 67, 67, 1); background-color: rgba(171, 171, 63, 0.35); text-shadow: 0.3px 0.3px #7b6906; border-radius: 5px; transition: background-color 0.2s linear 0.1s; }
+
 .Form span { color: #485967; font-size: 30px; padding-top: 45px; display: block; overflow: hidden; }
 @media only screen and (min-width: 820px){
   .Form span { display: inline; font-size: 45px; padding: 0 0 0 100px; }

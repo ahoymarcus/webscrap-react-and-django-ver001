@@ -33343,6 +33343,7 @@ function (_React$Component) {
       value: ''
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    _this.resetForm = _this.resetForm.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -33354,6 +33355,13 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "resetForm",
+    value: function resetForm() {
+      this.setState({
+        value: ''
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       //placeholder="Escolha o seu produto..."
@@ -33362,7 +33370,9 @@ function (_React$Component) {
       }, _react["default"].createElement("form", {
         action: "http://127.0.0.1:8000/scrapapp",
         method: "GET"
-      }, "Produto: ", _react["default"].createElement("input", {
+      }, _react["default"].createElement("button", {
+        onClick: this.resetForm
+      }, "Reset"), _react["default"].createElement("br", null), "Produto: ", _react["default"].createElement("input", {
         type: "text",
         name: "produto",
         value: this.state.value,

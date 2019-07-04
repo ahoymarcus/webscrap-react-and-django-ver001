@@ -16,11 +16,15 @@ class Form extends React.Component{
     super(props);
     this.state = { value: ''};
     this.handleChange = this.handleChange.bind(this);
+		this.resetForm = this.resetForm.bind(this);
   }
   
   handleChange(e){
     this.setState({ value: event.target.value });
   }
+	resetForm(){
+		this.setState({ value: '' });
+	}
   
   render(){
 		
@@ -30,6 +34,9 @@ class Form extends React.Component{
       <div className="Form">
         
         <form action="http://127.0.0.1:8000/scrapapp" method="GET">
+				
+					<button onClick={this.resetForm}>Reset</button><br />
+					
           Produto: <input type="text" name="produto" value={this.state.value} onChange={this.handleChange}  list="input-valid" required pattern={pattern} />
           
 					<InputValidation />
