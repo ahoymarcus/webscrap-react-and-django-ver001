@@ -33326,6 +33326,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+var pattern = "[Aa]lmofada.*[kr]$|" + "[Cc]aneca.*[Dknr]$|" + "[Cc]haveiro.*[knr]$|" + "[Cc]ombo.*n$|" + "[Cc]opo.*[sT]$|" + "[Kk]it.*s$|" + "[Ll]ivro.*[\)34n]$|";
+
 var Form =
 /*#__PURE__*/
 function (_React$Component) {
@@ -33367,7 +33369,7 @@ function (_React$Component) {
         onChange: this.handleChange,
         list: "input-valid",
         required: true,
-        pattern: "[Cc]ombo|[Cc]haveiro|[Cc]opo|[Cc]aneca|[Ll]ivro|[Kk]it|[Aa]lmofada"
+        pattern: pattern
       }), _react["default"].createElement(_InputValidation["default"], null), _react["default"].createElement("input", {
         type: "submit",
         value: "Escolha seu produto"

@@ -2,6 +2,15 @@ import React from 'react';
 
 import InputValidation from './InputValidation';
 
+
+const pattern = "[Aa]lmofada.*[kr]$|" +
+								"[Cc]aneca.*[Dknr]$|" +
+								"[Cc]haveiro.*[knr]$|" +
+								"[Cc]ombo.*n$|" +
+								"[Cc]opo.*[sT]$|" +
+								"[Kk]it.*s$|" +
+								"[Ll]ivro.*[\)34n]$|";
+							
 class Form extends React.Component{
   constructor(props){
     super(props);
@@ -21,7 +30,7 @@ class Form extends React.Component{
       <div className="Form">
         
         <form action="http://127.0.0.1:8000/scrapapp" method="GET">
-          Produto: <input type="text" name="produto" value={this.state.value} onChange={this.handleChange}  list="input-valid" required pattern="[Cc]ombo|[Cc]haveiro|[Cc]opo|[Cc]aneca|[Ll]ivro|[Kk]it|[Aa]lmofada" />
+          Produto: <input type="text" name="produto" value={this.state.value} onChange={this.handleChange}  list="input-valid" required pattern={pattern} />
           
 					<InputValidation />
 					
