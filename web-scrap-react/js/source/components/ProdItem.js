@@ -9,9 +9,6 @@ class ProdItem extends React.Component {
 	
 	render() {
     
-    //   
-    // 
-    
     var produtos = this.props.produtos.map( (produto, index) => {
         return <dl key={index}>
             

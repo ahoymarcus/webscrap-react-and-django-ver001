@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _InputValidation = _interopRequireDefault(require("./InputValidation"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -55,6 +57,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      //placeholder="Escolha o seu produto..."
       return _react["default"].createElement("div", {
         className: "Form"
       }, _react["default"].createElement("form", {
@@ -65,9 +68,10 @@ function (_React$Component) {
         name: "produto",
         value: this.state.value,
         onChange: this.handleChange,
-        placeholder: "Escolha o seu produto...",
-        required: true
-      }), _react["default"].createElement("input", {
+        list: "input-valid",
+        required: true,
+        pattern: "[Cc]ombo|[Cc]haveiro|[Cc]opo|[Cc]aneca|[Ll]ivro|[Kk]it|[Aa]lmofada"
+      }), _react["default"].createElement(_InputValidation["default"], null), _react["default"].createElement("input", {
         type: "submit",
         value: "Escolha seu produto"
       }), _react["default"].createElement("span", null, this.state.value)));

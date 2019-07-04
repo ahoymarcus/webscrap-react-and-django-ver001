@@ -27,44 +27,35 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var ProdItem =
+var listValid = ['Combo Livros Crônicas de Gelo e Fogo – George R.R. Martin', 'Chaveiro GOT Lannister', 'Chaveiro GOT Stark', 'Chaveiro GOT Targaryen', 'Copo Viagem Metal 450ML GOT', 'Caneca Alça Quadrada 500ML Lannister', 'Caneca Alça Quadrada 500ML Targaryen', 'Caneca Alça Quadrada 500ML Stark', 'Caneca 3D GOT Stark Escudo', 'Livro A Guerra dos Tronos – As Crônicas de Gelo e Fogo – Volume 1 – George R.R. Martin', 'Livro Fogo e Sangue – George R.R. Martin', 'Kit Almofadas Game Of Thrones', 'Kit Almofada Porta Pipoca Game of Thrones', 'Kit Shot Game of Thrones', 'Almofada Game of Thrones Stark', 'Almofada Game of Thrones Lannister', 'Livro – A Tormenta de Espadas: As Crônicas de Gelo e Fogo – Livro 3', 'Livro – A Guerra Dos Tronos – Volume 2 (HQ)', 'Livro – O Festim dos Corvos: As Crônicas de Gelo e Fogo – Livro 4', 'Copo Viagem Emborrachado Game of Thrones', 'Caneca Game of Thrones Escudo Targaryen 3D'];
+
+var InputValidation =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(ProdItem, _React$Component);
+  _inherits(InputValidation, _React$Component);
 
-  function ProdItem(props) {
-    var _this;
+  function InputValidation() {
+    _classCallCheck(this, InputValidation);
 
-    _classCallCheck(this, ProdItem);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(ProdItem).call(this, props));
-    _this.state = {
-      counter: 3
-    };
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(InputValidation).apply(this, arguments));
   }
 
-  _createClass(ProdItem, [{
+  _createClass(InputValidation, [{
     key: "render",
     value: function render() {
-      var produtos = this.props.produtos.map(function (produto, index) {
-        return _react["default"].createElement("dl", {
+      var optList = listValid.map(function (opt, index) {
+        return _react["default"].createElement("option", {
           key: index
-        }, _react["default"].createElement("dt", null, index + 1, ". Produto: ", produto.produto), _react["default"].createElement("div", {
-          className: "Grid"
-        }, _react["default"].createElement("dd", null, _react["default"].createElement("img", {
-          src: produto.link,
-          alt: produto.produto
-        })), _react["default"].createElement("dd", null, "R$ ", produto.preco)));
+        }, opt);
       });
-      return _react["default"].createElement("div", {
-        className: "Lista"
-      }, produtos);
+      return _react["default"].createElement("datalist", {
+        id: "input-valid"
+      }, optList);
     }
   }]);
 
-  return ProdItem;
+  return InputValidation;
 }(_react["default"].Component);
 
-var _default = ProdItem;
+var _default = InputValidation;
 exports["default"] = _default;
