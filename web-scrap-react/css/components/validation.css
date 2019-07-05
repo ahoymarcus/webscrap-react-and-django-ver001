@@ -1,0 +1,7 @@
+.Validation { color: #9e2121; text-align: center; margin: 5px 0; /*position: relative; bottom: 10px;*/ }
+
+
+input:invalid { border: 2px dashed #bf4242; }
+
+input:valid { border: 2px solid black; }
+

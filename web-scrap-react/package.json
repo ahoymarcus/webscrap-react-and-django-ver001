@@ -7,7 +7,7 @@
   "scripts": {
     "babel": "babel js/source -d js/build",
     "browserify": "browserify js/build/app.js -o bundle.js",
-    "concat": "concat -o bundle.css ./css/app.css ./css/components/header.css ./css/components/footer.css ./css/components/form.css ./css/components/lista.css ./css/components/main.css",
+    "concat": "concat -o bundle.css ./css/app.css ./css/components/header.css ./css/components/footer.css ./css/components/form.css ./css/components/lista.css ./css/components/main.css ./css/components/validation.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
